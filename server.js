@@ -1,14 +1,18 @@
 'use strict';
 
-const { response, request } = require('express');
 const express = require ('express');
+
+require('dotenv').config();
+const cors = require('cors');
+
+
 
 const server = express();
 
 const pokeData = require('./assets/poke.json')
 
 const PORT = process.env.PORT;
-
+server.use(cors());
 
 server.get('/test',(request,response)=>{
 
