@@ -29,8 +29,8 @@ server.get('/pokemon',(req,res)=>{
 
 
 
-//http://localhost:3001/pokemon?pokeName=charmander
-server.get('/pokemon',(req,res)=>{
+//localhost:3001/getPokemon?pokeName=charmander
+server.get('/getPokemon',(req,res)=>{
 
     let pokemonName = req.query.pokeName
 
