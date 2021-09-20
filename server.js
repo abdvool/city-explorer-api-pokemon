@@ -7,8 +7,7 @@ const server = express();
 
 const pokeData = require('./assets/poke.json')
 
-const PORT = 3001;
-
+const PORT = process.env.PORT;
 
 
 server.get('/test',(request,response)=>{
@@ -19,6 +18,7 @@ server.get('/test',(request,response)=>{
 
 
 //http://localhost:3001/pokemon
+//https://pokemon301d33.herokuapp.com/pokemon  
 server.get('/pokemon',(req,res)=>{
 
     res.send(pokeData);
@@ -30,6 +30,8 @@ server.get('/pokemon',(req,res)=>{
 
 
 //localhost:3001/getPokemon?pokeName=charmander
+//https://pokemon301d33.herokuapp.com/getPokemon?pokeName=charmander
+
 server.get('/getPokemon',(req,res)=>{
 
     let pokemonName = req.query.pokeName
